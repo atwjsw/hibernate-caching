@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 29, 2016 6:19:12 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.imooc.hibernate.entity.Employee" table="employee">
+    	<!-- usage: 制定缓存策略，可选的策略包括：transactional, read-write,nonstrict-read-write或read-only 
+    		region: 制定二级缓存区域名
+    		include: 指定适合延缓加载的对象。all,表示缓存全部对象；non-lazy表示不缓存延迟加载的对象
+    	-->
+    	<!-- <cache usage="read-only"/> -->     	
+        <id name="empid" column="empid" type="java.lang.Integer">
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name"/>
+        </property>
+        <property name="age" type="java.lang.Integer">
+            <column name="age"/>
+        </property>       
+    </class>
+</hibernate-mapping>
